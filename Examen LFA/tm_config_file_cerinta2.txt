@@ -1,0 +1,79 @@
+States:
+A
+B
+C
+D
+q_firstAccept
+q_secondAccept
+q_Reject
+check_x
+check_y
+End
+Input alphabet:
+0
+1
+End
+Tape alphabet:
+0
+1
+x
+y
+_
+=
+End
+Blank symbol:
+_
+End
+Initial state:
+A
+End
+Accept state:
+q_firstAccept
+q_secondAccept
+End
+Reject state:
+q_Reject
+End
+Check state:
+check_x
+check_y
+End
+Transitions:
+A mainTape _ -> q_firstAccept _ L
+
+A mainTape 0 -> A = D
+A copyTape _ -> A x U
+A mainTape = -> B x R
+
+A mainTape y -> D y R
+B mainTape 0 -> B 0 R
+B mainTape y -> B y R
+
+B mainTape 1 -> B = D
+B copyTape _ -> B y U
+B mainTape = -> C y L
+
+C mainTape 0 -> C 0 L
+C mainTape y -> C y L
+C mainTape x -> A x R
+D mainTape y -> D y R
+D mainTape _ -> q_firstAccept _ .
+
+q_firstAccept mainTape _ -> check_y _ L
+check_y mainTape y -> check_y = D
+check_y copyTape y -> check_y = U
+check_y mainTape = -> check_y = L
+
+check_y mainTape x -> check_x = D
+check_x mainTape x -> check_x = D
+check_x copyTape x -> check_x = U
+check_x mainTape = -> check_x = L
+
+check_x mainTape _ -> q_secondAccept _ L
+End
+Language:
+0^(n)1^(n)
+End
+Input:
+_ 0 0 0 0 0 0 1 1 1 1 1 1 _
+End
