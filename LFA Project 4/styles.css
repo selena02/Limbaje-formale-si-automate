@@ -1,0 +1,87 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+body{
+    background-color: #EEEEEE;
+    font-family: 'Geomanist', Arial, sans-serif !important;
+}
+nav{
+    background-color: #002f34;
+}
+nav p{
+    padding: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #24e5db;
+}
+#filters{
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+#filters input{
+    margin: 0px 3px 0px 15px;
+}
+button{
+	background-color: white;
+	border: 0.25px solid gray;
+    margin-left: auto;
+    padding: 10px;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+button:hover{
+    background-color:#002f34;
+    color: white;
+}
+main{
+    width: 90%;
+    height: 100%;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+}
+main #count{
+    font-size: 25px;
+    font-weight: bold;
+}
+main #filters{
+    font-size: 15px;
+    margin-top: 5px;
+    font-weight: lighter;
+}
+ul{
+    margin-top: 20px;
+    columns: 2;
+}
+li{
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: white;
+    list-style-type: none;
+
+    page-break-inside: avoid;
+    break-inside: avoid-column;
+}
+li h3{
+    font-size: 18px;
+    word-wrap: normal
+}
+li h2{
+    text-align: right;
+}
+img{
+    margin-top: 5px;
+    width: 216px;
+    height: 152px;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+li:hover{
+    cursor: pointer;
+}
